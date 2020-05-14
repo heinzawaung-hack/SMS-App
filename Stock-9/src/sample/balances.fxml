@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" prefHeight="450.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.balances">
+   <children>
+      <VBox alignment="CENTER" maxHeight="200.0" prefHeight="424.0" prefWidth="797.0" HBox.hgrow="ALWAYS">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="backTransact" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXTextField fx:id="productField" focusColor="BLACK" labelFloat="true" layoutX="28.0" layoutY="28.0" prefHeight="40.0" prefWidth="177.0" promptText="Product ID" unFocusColor="#282121">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="quantityField" focusColor="BLACK" labelFloat="true" layoutX="258.0" layoutY="28.0" prefHeight="40.0" prefWidth="177.0" promptText="Quantity" unFocusColor="#393030">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="remarkField" focusColor="#0d0d0d" labelFloat="true" layoutX="488.0" layoutY="28.0" prefHeight="40.0" prefWidth="177.0" promptText="Remark" unFocusColor="#393030">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="saveButton" layoutX="488.0" layoutY="140.0" onAction="#saveButtonAction" prefHeight="40.0" prefWidth="157.0" text="Save">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelButton" layoutX="28.0" layoutY="140.0" onAction="#cancelBalanceAction" prefHeight="40.0" prefWidth="157.0" text="Cancel">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXRadioButton fx:id="outRadioButton" layoutX="353.0" layoutY="100.0" text="OUT">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="inOutToggle" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="inRadioButton" layoutX="258.0" layoutY="100.0" selected="true" text="IN" toggleGroup="$inOutToggle">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

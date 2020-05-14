@@ -1,0 +1,7 @@
+.backgroundColor{
+    -fx-background-color : linear-gradient(#00416A, #E4E5E6);
+}
+
+.backTransact{
+    -fx-background-color : linear-gradient(#efefbb, #d4d3dd);
+}
